@@ -98,8 +98,8 @@ namespace Prog1
             set
             {
                 // ensures power draw is not negative
-                if (value < 0 || value > 2000)
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(PowerDraw)} must be an integer from 0 - 2,000.");
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(PowerDraw)} must be an integer > 0.");
 
                 powerDraw = value;
             }
