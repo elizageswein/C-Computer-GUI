@@ -57,8 +57,8 @@ namespace Prog1
             set
             {
                 // ensures fixed tdp is not negative
-                if (value < 0 || value > 2000)
-                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(FixedTDP)} must be an integer between 0-2000");
+                if (value < 0)
+                    throw new ArgumentOutOfRangeException(nameof(value), value, $"{nameof(FixedTDP)} must be an integer > 0.");
 
                 fixedTDP = value;
             }
